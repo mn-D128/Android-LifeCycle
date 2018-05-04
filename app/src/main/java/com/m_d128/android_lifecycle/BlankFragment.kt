@@ -128,6 +128,18 @@ class BlankFragment : Fragment() {
         Log.v("A", "Fragment onDestroy " + (this.activity as MainActivity).getActivityId().toString() + " " + this.fragmentId.toString())
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        Log.v("A", "Fragment onSaveInstanceState " + (this.activity as MainActivity).getActivityId().toString() + " " + this.fragmentId.toString())
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+
+        Log.v("A", "Fragment onViewStateRestored " + (this.activity as MainActivity).getActivityId().toString() + " " + this.fragmentId.toString())
+    }
+
     fun onFragmentResume() {
         val activity: MainActivity = this.activity as MainActivity
         val activityId: Int = activity.getActivityId()
