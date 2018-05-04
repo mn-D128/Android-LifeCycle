@@ -3,6 +3,7 @@
     package="com.m_d128.android_lifecycle">
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
